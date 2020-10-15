@@ -21,8 +21,10 @@ public class DicewareGenerator implements PassphraseGenerator {
 
   @Override
   public String[] passphrase(int length) {
-    return IntStream.generate(() -> rng.nextInt(words.size())).limit(length)
-        .mapToObj(words::get).toArray(String[]::new);
+    return IntStream.generate(() -> rng.nextInt(words.size()))
+        .limit(length)
+        .mapToObj(words::get)
+        .toArray(String[]::new);
   }
 
 }

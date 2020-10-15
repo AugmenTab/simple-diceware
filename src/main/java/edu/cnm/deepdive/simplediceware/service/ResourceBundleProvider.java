@@ -18,7 +18,9 @@ public class ResourceBundleProvider implements WordProvider {
 
   @Override
   public Collection<String> words() {
-    return bundle.keySet().stream().map(bundle::getString).collect(Collectors.toList());
+    return bundle.keySet().stream()
+        .map(bundle::getString)
+        .collect(Collectors.toList());
   }
 
 }
